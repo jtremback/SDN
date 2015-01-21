@@ -62,4 +62,4 @@ This is a list of unique items in-order. A non-unique item is a syntax error.
 ### Map
 This is like the dictionary, except the keys can be any value or data structure.
 
-`dict[arr[1, 2]: "bar", "damn": 34]`
+`map[arr[1, 2]: "bar", "damn": 34]`
