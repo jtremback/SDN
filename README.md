@@ -47,9 +47,19 @@ With the primitives defined above, we can begin to build data structures. I'm go
 ### Array
 This is a data structure consisting of an in-order set of values. There is no requirement for the items to be unique, or to all be of the same type. Values can be other data structures.
 
-`arr[1, "foo", 34]`
+`arr[1, "foo", 34, "foo"]`
 
 ### Dictionary
-This is a data structure consisting of an out-of-order set of key value pairs. Keys must be strings. Values can be other data structures.
+This is a data structure consisting of an out-of-order set of key value pairs. Keys must be strings. Values can be any value or data structures.
 
 `dict["foo": "bar", "damn": 34]`
+
+### Set
+This is a list of unique items in-order. A non-unique item is a syntax error.
+
+`set[1, "foo", 34]`
+
+### Map
+This is like the dictionary, except the keys can be any value or data structure.
+
+`dict[arr[1, 2]: "bar", "damn": 34]`
