@@ -39,7 +39,7 @@ SDN consists of a few primitives:
 - **String:** A string. This gets put into double quotes `"string"`. I have not worked out the details around encoding etc. yet. Open an issue if you have suggestions.
 - **Number:** A number is written without quotes. Any unquoted sequence of alphanumeric characters that is not a structure tag can be considered a number. I'm not at all sure about what type or precision of number should be used, and very open to suggestions. Please open an issue about this.
 
-NOTE: Whitespace is ignored by EDN.
+NOTE: Whitespace is ignored by SDN.
 
 ## Data structures
 With the primitives defined above, we can begin to build data structures. I'm going to start with the structures available in Javascript ES6, as this is the language I am most familiar with.
