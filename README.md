@@ -18,7 +18,7 @@ The simplest, most extensible serialization format I can think of. I may be wron
 [dict
   "hash": "w32fwfw33",
   "message": [dict
-    "timestamp": "29304857",
+    "timestamp": 29304857,
     "content": [dict
       "name": "richard",
       "scores": [arr 4, 5, 3, 6]
