@@ -1,6 +1,32 @@
 # SDN - Simple Data Notation
 The simplest, most extensible serialization format I can think of. I may be wrong about some of the details, but I think the underlying idea is solid. Please open an issue if you would like to correct me on naming or attributes of the data structures I define, or if you feel that anything here is unclear.
 
+```
+// JSON
+{
+  "hash": "w32fwfw33",
+  "message": {
+    "timestamp": "29304857",
+    "content": {
+      "name": "richard",
+      "scores": [4, 5, 3, 6]
+    }
+  }
+}
+
+// SDN
+[dict
+  "hash": "w32fwfw33",
+  "message": [dict
+    "timestamp": "29304857",
+    "content": [dict
+      "name": "richard",
+      "scores": [arr 4, 5, 3, 6]
+    ]
+  ]
+]
+```
+
 ### Purpose
 This format is to be used in a similar way as JSON or EDN, however it is designed to avoid the language-specific idiosyncracies that JSON and EDN have inherited from their parent languages. JSON can represent arrays and dictionaries (called "objects" in Javascript). If one would like to represent a set in JSON, this would need to be shoehorned into an array and later decoded by some arbitrary parser in application code. EDN uses a lot of very Clojure-specific syntax, and has a focus on the data structures available in that language. SDN, on the other hand, is designed to be as neutral as possible.
 
@@ -18,4 +44,12 @@ NOTE: Whitespace is ignored by EDN.
 ## Data structures
 With the primitives defined above, we can begin to build data structures. I'm going to start with the structures available in Javascript ES6, as this is the language I am most familiar with.
 
-`//TODO`
+### Array
+This is a data structure consisting of an in-order set of values. There is no requirement for the items to be unique, or to all be of the same type. Values can be other data structures.
+
+`[arr 1, "foo", 34]`
+
+### Dictionary
+This is a data structure consisting of an out-of-order set of key value pairs. Keys must be strings. Values can be other data structures.
+
+`[dict "foo": "bar", "damn": 34]`
