@@ -1,4 +1,4 @@
-# SDN - Simple Data Notation
+# SDN - Standard Data Notation
 The simplest, most extensible serialization format I can think of. I may be wrong about some of the details, but I think the underlying idea is solid. Please open an issue if you would like to correct me on naming or attributes of the data structures I define, or if you feel that anything here is unclear.
 
 ### Purpose
