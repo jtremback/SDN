@@ -1,6 +1,9 @@
 # SDN - Simple Data Notation
 The simplest, most extensible serialization format I can think of. I may be wrong about some of the details, but I think the underlying idea is solid. Please open an issue if you would like to correct me on naming or attributes of the data structures I define, or if you feel that anything here is unclear.
 
+### Purpose
+This format is to be used in a similar way as JSON or EDN, however it is designed to avoid the language-specific idiosyncracies that JSON and EDN have inherited from their parent languages. Instead of indicating different data structures with different types of brackets, the type of data structure is indicated with a tag immediately preceding it. This makes it possible to represent an unlimited number of data structures with a very simple format.
+
 ```
 // JSON
 {
@@ -26,9 +29,6 @@ dict[
   ]
 ]
 ```
-
-### Purpose
-This format is to be used in a similar way as JSON or EDN, however it is designed to avoid the language-specific idiosyncracies that JSON and EDN have inherited from their parent languages. JSON can represent arrays and dictionaries (called "objects" in Javascript). If one would like to represent a set in JSON, this would need to be shoehorned into an array and later decoded by some arbitrary parser in application code. EDN uses a lot of very Clojure-specific syntax, and has a focus on the data structures available in that language. SDN, on the other hand, is designed to be as neutral as possible.
 
 ## Primitives
 SDN consists of a few primitives:
